@@ -255,7 +255,7 @@ if (is`入聲` && 聲調 === '6' && is短元音(韻母)) 聲調 = '4';
 // 合口
 if (is`合口 或 模韻` && !['eo', 'oe', 'yu'].some(x => 韻母.startsWith(x))) {
   if ((聲母 === 'g' || 聲母 === 'k') && !韻母.startsWith('u')) 聲母 += 'w';
-  else if (聲母 === 'h' && !韻母.startsWith('i')) 聲母 = 'w'; // * 溪曉母合口讀 w
+  else if (聲母 === 'h' && !韻母.startsWith('i') && is`溪曉母`) 聲母 = 'w'; // * 溪曉母合口讀 w
   else if (聲母 === 'j' || 聲母 === '') 聲母 = 'w';
 }
 
